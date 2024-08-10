@@ -1,6 +1,3 @@
-#
-Final thing to do: add comments to remind myself on how the program works if I ever look back at this. I will thank myself if I do this.
-
 ## Goals
 In this application you will build out a fun application that allows users the joys of owning a cat. This app is intended to ensure you as a student have learned the fundamental concepts around web development successfully graduating you out of the beginners bracket.
 

@@ -1,9 +1,11 @@
+// Acquiring & adding event listener for the form regarding adding kitten
 let addKittenForm = document.getElementById('add-kitten');
 addKittenForm.addEventListener('submit', (e) => {
   e.preventDefault();
   addKitten(e);
 });
 
+// Acquiring & adding event listener for clearing kittens
 let clearKittensBtn = document.getElementById('clear-kittens');
 clearKittensBtn.addEventListener('click', () => clearKittens());
 
@@ -145,7 +147,7 @@ function findKittenById(id) {
   return kittens.find((k) => k.id === id);
 }
 
-// Find kitten within array by its index
+// Find kittens index within array by its id
 function findKittenPosition(id) {
   return kittens.findIndex((k) => k.id === id);
 }
