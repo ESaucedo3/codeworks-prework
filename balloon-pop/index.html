@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Balloon Pop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="prime.css">
+    <script defer type="module" src="prime.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container shadow">
+        <img src="balloon-pop-logo.png" alt="Balloon Pop Logo">
+      </div>
+    </header>
+
+    <main class="container card">
+      <form class="d-flex space-between" id="player-form">
+        <div>
+          <label for="name"><i class="fa-solid fa-circle-user"></i><span> Player Name:</span></label>
+          <input name="playerName" required>
+        </div>
+        <button type="submit">Ok</button>
+      </form>
+
+      <section id="game" class="game hidden">
+        <div class="card bg-dark text-light">
+          <div class="d-flex space-between">
+            <div>
+              <i class="fa-solid fa-circle-user"></i>
+              <span id="player-name"></span>
+            </div>
+
+            <div>
+              <p>Top Popped: <span id="high-pop-count">0</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="main-controls" class="d-flex space-around mt-2">
+          <button class="btn-dark" id="change-player">Change Player</button>
+          <button id="startBtn">START GAME</button>
+        </div>
+
+        <div id="game-controls" class="hidden">
+          <div>
+            <p>Balloons Popped: <span id="pop-count">0</span></p>
+          </div>
+          <div>
+            <p>Time Remaining: <span id="countdown">0</span></p>
+          </div>
+
+          <div class="game-container d-flex">
+            <div id="pump" class="pump">
+              <div class="handle"></div>
+              <div class="pump-box">
+                <span id="click-count"></span>
+              </div>
+            </div>
+            <div id="balloon" class="balloon"></div>  
+            <audio id="pop-sound" src="burst.mp3"></audio>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="scoreboard" class="container card mt-2">
+      <h3>Scoreboard</h3>
+      <div id="players"></div>
+    </div>
+  </body>
+</html>

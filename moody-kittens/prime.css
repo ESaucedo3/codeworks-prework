@@ -1,0 +1,152 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  flex: 1;
+  padding: .7rem;
+  background-color: lightblue;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  padding-bottom: .3rem;
+
+  & img {
+    height: 160px;
+    width: 210px;
+    margin: 10px 0 10px 10px;
+  }
+
+  & input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+  }
+
+  & button {
+      padding: .3rem;
+      cursor: pointer;
+    }
+
+  & .btns-special {
+    margin-top: 1.1rem;
+
+    & button {
+      border: 1px solid white;
+      transition: all .3s ease;
+    }
+  }
+
+  & .btn-add {
+    background-color: rgba(183, 244, 216, .9);
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(183, 244, 216, 0.7), 0 0 20px rgba(183, 244, 216, 0.4);
+    }
+  }
+
+  & .btn-delete {
+    background-color: rgba(255, 36, 0, .9);
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(255, 36, 0, 0.7), 0 0 20px rgba(255, 36, 0, 0.4);
+    }
+  }
+}
+
+footer {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+
+  & p {
+    color: azure;
+  }
+}
+
+a {
+  color: inherit;
+  transition: all .3s ease;
+
+  &:hover {
+    color: lightblue;
+  }
+}
+
+#kittens-container {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(6.25rem, 1fr));
+  gap: .4rem;
+}
+
+.kitten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(48, 45, 45, .4); 
+  border: 1px solid #333;
+  padding: .3rem;
+
+  & p {
+    color: azure;
+  }
+
+  & button {
+    border: 1px solid white;
+    padding: .3rem;
+    cursor: pointer;
+    transition: all .6s ease;
+    margin-left: 4px;
+  }
+
+  & .kitten-img {
+    width: 190px;
+    height: 190px;
+    margin: 4px 0 4px 0;
+  }
+
+  & .pet-kitten, .catnip-kitten {
+    background-color: rgb(137, 225, 254);
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.7), 0 0 20px rgba(0, 191, 255, 0.4);
+    }
+  }
+
+  & .delete-kitten {
+    background-color: red;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(255, 36, 0, 0.7), 0 0 20px rgba(255, 36, 0, 0.4);
+    }
+  }
+}
+
+@media (width < 36em) {
+  #kittens-container {
+    grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
+  }
+}
+
+@media (36em <= width <= 62em) {
+  #kittens-container {
+    grid-template-columns: repeat(4, minmax(6.25rem, 1fr));
+  }
+}

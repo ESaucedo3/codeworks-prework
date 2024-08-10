@@ -1,0 +1,16 @@
+{
+  "name": "moody-kittens",
+  "version": "1.0.0",
+  "description": "Final thing to do: add comments to remind myself on how the program works if I ever look back at this. I will thank myself if I do this.",
+  "main": "prime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0"
+  }
+}
